@@ -54,6 +54,57 @@
     });
   }
 
+  /* Desktop: open Products on hover. Phones keep the tap menu. */
+  var productDrop = document.querySelector(".nav-item.dropdown");
+  var productToggle = productDrop
+    ? productDrop.querySelector("[data-bs-toggle='dropdown']")
+    : null;
+
+  if (productDrop && productToggle && window.bootstrap && window.bootstrap.Dropdown) {
+    var desktopNav = window.matchMedia("(min-width: 992px)");
+    var closeTimer = 0;
+
+    function productMenu() {
+      return window.bootstrap.Dropdown.getOrCreateInstance(productToggle);
+    }
+
+    function openProductMenu() {
+      if (!desktopNav.matches) {
+        return;
+      }
+      window.clearTimeout(closeTimer);
+      productMenu().show();
+    }
+
+    function closeProductMenu() {
+      if (!desktopNav.matches) {
+        return;
+      }
+      window.clearTimeout(closeTimer);
+      closeTimer = window.setTimeout(function () {
+        productMenu().hide();
+      }, 160);
+    }
+
+    productDrop.addEventListener("mouseenter", openProductMenu);
+    productDrop.addEventListener("mouseleave", closeProductMenu);
+    productDrop.addEventListener("focusin", openProductMenu);
+    productDrop.addEventListener("focusout", function (event) {
+      if (!productDrop.contains(event.relatedTarget)) {
+        closeProductMenu();
+      }
+    });
+
+    productToggle.addEventListener("click", function (event) {
+      if (!desktopNav.matches) {
+        return;
+      }
+      event.preventDefault();
+      event.stopPropagation();
+      openProductMenu();
+    });
+  }
+
   /* ---------------------------------------------------------------------
      Footer year
      --------------------------------------------------------------------- */

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' https://cdn.jsdelivr.net; script-src-attr 'none'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net 'unsafe-inline'; style-src-elem 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self'; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net; worker-src 'none'; frame-src 'none'; manifest-src 'self'">
   <title>DigiSpherEMR | Practice Management for Independent Doctors</title>
   <meta name="description" content="DigiSpherEMR is a Windows practice application for independent doctors. Charts, SOAP notes, prescriptions, appointments, billing, and backups stay on the clinic computer.">
   <meta name="robots" content="index, follow">
@@ -30,7 +31,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="/assets/css/styles.css" rel="stylesheet">
-  <noscript><style>.navbar-collapse{display:block!important}.navbar-toggler{display:none!important}</style></noscript>
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -126,7 +127,7 @@
         <ul>
           <li><i class="bi bi-windows" aria-hidden="true"></i><span>Windows 10 and 11 desktop app</span></li>
           <li><i class="bi bi-pc-display" aria-hidden="true"></i><span>Records stay on the practice computer</span></li>
-          <li><i class="bi bi-tag" aria-hidden="true"></i><span>$239 for one PC, $359 for two</span></li>
+          <li><i class="bi bi-tag" aria-hidden="true"></i><span>One computer, or two computers with inventory</span></li>
         </ul>
       </aside>
     </div>
@@ -137,8 +138,8 @@
     <div class="fact-bar">
       <div><strong>Windows 10 and 11</strong><span>64-bit desktop application. No separate database to install.</span></div>
       <div><strong>Local records</strong><span>Notes, appointments, and billing are built to work without a constant connection.</span></div>
-      <div><strong>Lifetime license</strong><span>One payment. No monthly software subscription.</span></div>
-      <div><strong>$239 or $359</strong><span>One computer, or two computers with inventory.</span></div>
+      <div><strong>Lifetime license</strong><span>Records, notes, prescriptions, appointments, and billing.</span></div>
+      <div><strong>Two licenses</strong><span>One computer, or two computers with inventory.</span></div>
     </div>
     <nav class="page-nav" aria-label="On this page">
       <a href="#overview">Overview</a>
@@ -210,10 +211,10 @@
     </div>
     <h2 class="mt-5" id="license">License</h2>
     <div class="row g-4 mt-1">
-      <div class="col-md-6"><article class="plan-card"><h3>One computer</h3><p class="price">$239</p><p>Lifetime license for a single Windows PC. Patient records, notes, prescriptions, appointments, and billing. Inventory is not included.</p></article></div>
-      <div class="col-md-6"><article class="plan-card featured"><h3>Two computers</h3><p class="price">$359</p><p>Lifetime license for two Windows PCs in the same clinic. Adds inventory, batches, and stock movements.</p></article></div>
+      <div class="col-md-6"><article class="plan-card"><h3>One computer</h3><p>Lifetime license for a single Windows PC. Patient records, notes, prescriptions, appointments, and billing. Inventory is not included.</p></article></div>
+      <div class="col-md-6"><article class="plan-card featured"><h3>Two computers</h3><p>Lifetime license for two Windows PCs in the same clinic. Adds inventory, batches, and stock movements.</p></article></div>
     </div>
-    <p class="closing-note">The published checkout is on the DigiSpherEMR site. A Windows 10 or 11 PC with 4 GB of memory is the stated minimum, and 8 GB is the recommended amount. The installer is a single program and does not ask you to install a separate database.</p>
+    <p class="closing-note">A Windows 10 or 11 PC with 4 GB of memory is the stated minimum, and 8 GB is the recommended amount. The installer is a single program and does not ask you to install a separate database.</p>
     <nav class="also" aria-label="Other DigiSpher products">
       <p class="kicker">Also from DigiSpher</p>
       <div class="also-row">
@@ -228,7 +229,7 @@
 <section class="cta-band">
   <div class="container">
     <h2>See the practice site, or ask a question here.</h2>
-    <p>The DigiSpherEMR site has the current offer, a demo request, and the French page. Do not send patient information through either form.</p>
+    <p>The DigiSpherEMR site has a demo request and the French page. Do not send patient information through either form.</p>
     <div class="cta-actions">
       <a class="btn btn-ds" href="https://ds-emr.digispher.online/" rel="noopener noreferrer">Visit DigiSpherEMR</a>
       <a class="btn btn-ds-light" href="/contact/?topic=Software%20Products&amp;subject=DigiSpherEMR">Contact DigiSpher</a>

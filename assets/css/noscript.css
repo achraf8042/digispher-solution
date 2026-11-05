@@ -1,0 +1,9 @@
+/* Loaded only when JavaScript is off, so the menu stays reachable without an inline style. */
+
+.navbar-collapse {
+  display: block !important;
+}
+
+.navbar-toggler {
+  display: none !important;
+}

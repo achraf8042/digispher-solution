@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' https://cdn.jsdelivr.net; script-src-attr 'none'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net 'unsafe-inline'; style-src-elem 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self'; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net; worker-src 'none'; frame-src 'none'; manifest-src 'self'">
   <title>Support | DigiSpher</title>
   <meta name="description" content="Get help with DigiSpher products, see what to include in a support request, and read common questions about installation, data, and licensing.">
   <meta name="robots" content="index, follow">
@@ -30,7 +31,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="/assets/css/styles.css" rel="stylesheet">
-  <noscript><style>.navbar-collapse{display:block!important}.navbar-toggler{display:none!important}</style></noscript>
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
   
 <script type="application/ld+json">
 {
@@ -130,7 +131,7 @@
       <div class="faq">
         <details class="faq-item">
           <summary>Where is my data stored?</summary>
-          <p>All five products are designed local-first. Records are stored on your Android device or Windows computer rather than on a DigiSpher server. Check the product page for the specific storage and backup details before you rely on it.</p>
+          <p>DropSpher, DigiSpherEMR, and LandlordPro keep their records on the computer or phone. Business QR keeps its library on the phone and also shows Google ads. InvoSpher keeps invoices and client records in an account. Check the product page before you rely on it.</p>
         </details>
         <details class="faq-item">
           <summary>How do I move a product to a new device?</summary>
@@ -142,7 +143,7 @@
         </details>
         <details class="faq-item">
           <summary>Can I use one license on several devices?</summary>
-          <p>License terms differ by product. DigiSpherEMR, for example, is licensed for two computers in the same clinic. Ask before installing on an additional device.</p>
+          <p>License terms differ by product. DigiSpherEMR is one Windows computer, or two computers in the same clinic when the license includes inventory. Ask before installing any product on an additional device.</p>
         </details>
         <details class="faq-item">
           <summary>Does this website take payments?</summary>

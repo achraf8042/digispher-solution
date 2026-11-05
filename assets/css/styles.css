@@ -416,6 +416,18 @@ strong {
   box-shadow: var(--shadow-lg);
 }
 
+@media (min-width: 992px) {
+  /* Covers the gap under Products so the pointer can reach the menu. */
+  .navbar-nav .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -0.75rem;
+    left: 0;
+    right: 0;
+    height: 0.75rem;
+  }
+}
+
 .navbar-nav .dropdown-item {
   display: flex;
   align-items: flex-start;
@@ -1881,6 +1893,12 @@ strong {
   border-radius: var(--radius-sm);
   color: var(--text);
   background-color: var(--white);
+}
+
+/* Bootstrap's select caret is a data-URI image. A local file keeps img-src limited to this site. */
+.form-select {
+  --bs-form-select-bg-img: url("/assets/img/select-caret.svg");
+  background-image: var(--bs-form-select-bg-img);
 }
 
 textarea.form-control {

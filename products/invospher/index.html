@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' https://cdn.jsdelivr.net; script-src-attr 'none'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net 'unsafe-inline'; style-src-elem 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self'; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net; worker-src 'none'; frame-src 'none'; manifest-src 'self'">
   <title>InvoSpher | Invoicing for Freelancers and Small Businesses</title>
   <meta name="description" content="InvoSpher is an Android invoicing app. Track revenue, pending and overdue amounts, clients, and PDF invoices. Free, monthly, and annual plans are published with the app.">
   <meta name="robots" content="index, follow">
@@ -30,7 +31,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="/assets/css/styles.css" rel="stylesheet">
-  <noscript><style>.navbar-collapse{display:block!important}.navbar-toggler{display:none!important}</style></noscript>
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -117,16 +118,19 @@
         <p class="eyebrow">Business and productivity</p>
         <h1>Invoices and clients, from the phone.</h1>
         <p class="lede">InvoSpher is an Android app for freelancers and small businesses. Create an invoice, keep the client, and see whether the money has arrived.</p>
-        <div class="hero-actions"><a class="btn btn-ds" href="/contact/?topic=Software%20Products&amp;subject=InvoSpher">Ask about InvoSpher</a><a class="btn btn-ds-ghost" href="#plans">See the plans</a></div>
+        <div class="hero-actions">
+          <a class="btn btn-ds" href="https://play.google.com/store/apps/details?id=com.digispher.invospher" rel="noopener noreferrer">Get it on Google Play</a>
+          <a class="btn btn-ds-ghost" href="/contact/?topic=Software%20Products&amp;subject=InvoSpher">Ask a question</a>
+        </div>
       </div>
       <aside class="product-identity" aria-label="InvoSpher at a glance">
         <span class="icon-tile"><i class="bi bi-receipt" aria-hidden="true"></i></span>
         <p class="product-identity__name">InvoSpher</p>
         <p class="product-identity__job">Invoicing for freelancers and small businesses</p>
         <ul>
-          <li><i class="bi bi-android2" aria-hidden="true"></i><span>Android, offered on Google Play</span></li>
+          <li><i class="bi bi-android2" aria-hidden="true"></i><span>Android, on Google Play</span></li>
           <li><i class="bi bi-tag" aria-hidden="true"></i><span>Free start: five invoices a month</span></li>
-          <li><i class="bi bi-star" aria-hidden="true"></i><span>$4.99 a month or $49.99 a year</span></li>
+          <li><i class="bi bi-star" aria-hidden="true"></i><span>Free, Premium, and annual plans</span></li>
         </ul>
       </aside>
     </div>
@@ -135,21 +139,22 @@
 <section class="section compact-top">
   <div class="container">
     <div class="fact-bar">
-      <div><strong>Android</strong><span>Offered on Google Play.</span></div>
-      <div><strong>Free start</strong><span>Five invoices a month. No credit card.</span></div>
-      <div><strong>$4.99 a month</strong><span>Unlimited invoices, branding, and the client record.</span></div>
-      <div><strong>$49.99 a year</strong><span>The same Premium set, billed annually.</span></div>
+      <div><strong>Android</strong><span>Published on Google Play as InvoSpher - Invoice Maker.</span></div>
+      <div><strong>Free plan</strong><span>Five invoices a month.</span></div>
+      <div><strong>Premium</strong><span>Unlimited invoices, branding, and the client record.</span></div>
+      <div><strong>Annual</strong><span>The same Premium set for a year.</span></div>
     </div>
     <nav class="page-nav" aria-label="On this page">
       <a href="#overview">Overview</a>
       <a href="#workflow">How an invoice gets made</a>
       <a href="#plans">Plans</a>
+      <a href="#privacy">Privacy</a>
     </nav>
     <div class="row g-4 g-lg-5 align-items-center mt-2">
       <div class="col-lg-7 story" id="overview">
         <p>The home screen is a short reading of the business. Total revenue sits at the top in the currency you use. Pending and overdue amounts sit beside it. Under that, two actions start the work: new invoice, or new client.</p>
         <p>Recent activity lists invoice numbers, the client name, the amount, and a status such as paid. The bottom of the app is four places: Home, Clients, Invoices, and Settings.</p>
-        <p>A free account can be created from the app. Paid plans add a logo, a signature, company colors, the fuller client record, and payment reminders. Cancel the paid plan from the app settings. The InvoSpher page also lists a 14-day trial on Premium and support for a large set of currencies.</p>
+        <p>A free account can be created from the app, and invoices and client records are kept with that account. Premium adds a logo, a signature, company colors, the fuller client record, and payment reminders. The paid plan can be cancelled from the app settings. The app also lists support for a large set of currencies.</p>
       </div>
       <div class="col-lg-5">
         <figure class="shot phone-shot">
@@ -167,11 +172,17 @@
     </div>
     <h2 class="mt-5" id="plans">Plans published with the app</h2>
     <div class="row g-4 mt-1">
-      <div class="col-md-4"><article class="plan-card"><h3>Free</h3><p class="price">$0 <span>/ month</span></p><p>Five invoices a month and basic templates. Custom branding and the client record are not included. No credit card to start.</p></article></div>
-      <div class="col-md-4"><article class="plan-card featured"><h3>Premium</h3><p class="price">$4.99 <span>/ month</span></p><p>Unlimited invoices, the template set, logo, signature, colors, the client record, reminders, and priority support. A 14-day trial is listed on the product page.</p></article></div>
-      <div class="col-md-4"><article class="plan-card"><h3>Annual</h3><p class="price">$49.99 <span>/ year</span></p><p>The Premium feature set, billed once a year. The product page describes this as two months included compared with paying monthly.</p></article></div>
+      <div class="col-md-4"><article class="plan-card"><h3>Free</h3><p>Five invoices a month and basic templates. Custom branding and the client record are not included.</p></article></div>
+      <div class="col-md-4"><article class="plan-card featured"><h3>Premium</h3><p>Unlimited invoices, the template set, logo, signature, colors, the client record, reminders, and priority support.</p></article></div>
+      <div class="col-md-4"><article class="plan-card"><h3>Annual</h3><p>The Premium feature set for a year.</p></article></div>
     </div>
-    <p class="closing-note">There is no long contract on the published plans. A paid subscription can be cancelled in the app. Write to DigiSpher for the current download.</p>
+    <p class="closing-note">Premium can be cancelled from the app settings.</p>
+    <article class="module-card privacy-note mt-5" id="privacy">
+      <p class="module-no">Privacy</p>
+      <h3>Invoices stay with the account</h3>
+      <p>InvoSpher is the DigiSpher product that uses an account. Invoices, client records, and the business details you add are stored so you can open them again from the app. The InvoSpher privacy policy says you can export that data, and that it is removed from InvoSpher servers after the account is closed.</p>
+      <p class="mb-0">Do not send client lists or invoice details through the DigiSpher contact form.</p>
+    </article>
     <nav class="also" aria-label="Other DigiSpher products">
       <p class="kicker">Also from DigiSpher</p>
       <div class="also-row">
@@ -185,9 +196,12 @@
 </section>
 <section class="cta-band">
   <div class="container">
-    <h2>Need the store link, or a question answered?</h2>
-    <p>Write to DigiSpher and name InvoSpher. Include whether you are asking about the free plan or Premium.</p>
-    <div class="cta-actions"><a class="btn btn-ds" href="/contact/?topic=Software%20Products&amp;subject=InvoSpher">Ask about InvoSpher</a></div>
+    <h2>The current build is on Google Play.</h2>
+    <p>Install InvoSpher from the store. Questions about the free plan or Premium can come through the contact form.</p>
+    <div class="cta-actions">
+      <a class="btn btn-ds" href="https://play.google.com/store/apps/details?id=com.digispher.invospher" rel="noopener noreferrer">Get it on Google Play</a>
+      <a class="btn btn-ds-light" href="/contact/?topic=Software%20Products&amp;subject=InvoSpher">Ask a question</a>
+    </div>
   </div>
 </section>
 
