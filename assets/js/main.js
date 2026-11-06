@@ -1,3 +1,4 @@
+/* The site serves main.min.js. Run minify.ps1 from the site root after editing. */
 (function () {
   "use strict";
 
@@ -6,16 +7,33 @@
      --------------------------------------------------------------------- */
 
   var header = document.querySelector(".site-header");
+  var desktopHeader = window.matchMedia("(min-width: 992px)");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  function updateScrollBehavior() {
+    var smooth = desktopHeader.matches && !reduceMotion.matches;
+    document.documentElement.style.setProperty("scroll-behavior", smooth ? "smooth" : "auto", "important");
+  }
 
   function updateHeader() {
     if (!header) {
       return;
     }
+    if (!desktopHeader.matches) {
+      header.classList.remove("is-scrolled");
+      return;
+    }
     header.classList.toggle("is-scrolled", window.scrollY > 8);
   }
 
+  updateScrollBehavior();
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
+  desktopHeader.addEventListener("change", function () {
+    updateScrollBehavior();
+    updateHeader();
+  });
+  reduceMotion.addEventListener("change", updateScrollBehavior);
 
   /* ---------------------------------------------------------------------
      Mobile navigation
